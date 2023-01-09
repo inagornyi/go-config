@@ -1,1 +1,1 @@
-# config
+# Simple gen config
