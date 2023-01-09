@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	config "github.com/inagornyi/config"
+	config "github.com/inagornyi/go-config"
 )
 
 func main() {
