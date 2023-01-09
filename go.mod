@@ -1,4 +1,4 @@
-module github.com/inagornyi/config
+module github.com/inagornyi/go-config
 
 go 1.19
 
