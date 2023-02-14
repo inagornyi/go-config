@@ -1,17 +1,18 @@
 package config
 
 import (
-	"fmt"
 	"os"
 
 	"gopkg.in/yaml.v3"
 )
 
-func NewConfig[T any](t T, path, filename string) (*T, error) {
-	bs, err := os.ReadFile(fmt.Sprintf("%s/%s", path, filename))
+func NewConfig[T any](name string) (*T, error) {
+	bs, err := os.ReadFile(name)
 	if err != nil {
 		return nil, err
 	}
+
+	var t T
 
 	if err := yaml.Unmarshal(bs, &t); err != nil {
 		return nil, err
